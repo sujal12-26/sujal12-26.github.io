@@ -5,7 +5,7 @@ import { defineConfig } from 'vite';
 const projectRoot = import.meta.dirname;
 
 export default defineConfig({
-  base: process.env.GITHUB_PAGES === 'true' ? '/sujal-portfolio/' : '/',
+  base: '/',
   plugins: [react(), tailwindcss()],
   resolve: {
     dedupe: ['react', 'react-dom'],

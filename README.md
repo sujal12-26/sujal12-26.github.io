@@ -31,4 +31,4 @@ npm run preview
 
 ## Deploy
 
-Pushing to `main` runs the GitHub Actions workflow in `.github/workflows/deploy.yml` and publishes the site to GitHub Pages. The project base path and asset links are configured for the `sujal-portfolio` repository.
+Pushing to `main` runs the GitHub Actions workflow in `.github/workflows/deploy.yml` and publishes the site to [https://sujal12-26.github.io/](https://sujal12-26.github.io/).
