@@ -80,6 +80,16 @@ const certificates: Record<string, CertificateItem> = {
     image: certificateAsset('jio-ai-foundation-course.jpg'),
     file: certificateAsset('jio-ai-foundation-course.pdf'),
   },
+  opticGuards: {
+    id: 'optic-guards-sih-2026',
+    title: 'Preliminary Smart India Hackathon 2026: Certificate of Appreciation',
+    provider: 'Karnavati University · Smart India Hackathon 2026',
+    description:
+      'Awarded to Sujal Patel of Team Optic Guards for the team’s contribution in the Preliminary Round of Smart India Hackathon 2026, held at Karnavati University, Gandhinagar on September 10-11, 2026. The certificate notes the team among the Top 100 teams representing Karnavati University.',
+    completedOn: 'Sep 11, 2026',
+    image: certificateAsset('optic-guards-sih-2026.jpg'),
+    file: certificateAsset('optic-guards-sih-2026.pdf'),
+  },
 };
 
 export const FEATURED_CERTIFICATES: CertificateItem[] = [
@@ -89,6 +99,7 @@ export const FEATURED_CERTIFICATES: CertificateItem[] = [
 ];
 
 export const ADDITIONAL_CERTIFICATES: CertificateItem[] = [
+  certificates.opticGuards,
   certificates.leadership,
   certificates.cBeginners,
   certificates.jioAi,
