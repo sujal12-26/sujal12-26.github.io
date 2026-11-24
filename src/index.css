@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-obsidian: #050505;
+  --color-surface: #0c0c0e;
+  --color-surface-elevated: #121215;
+  --color-hairline: #1f1f23;
+  --color-vermilion: #f0422b;
+  --color-vermilion-hover: #ff553e;
+}
+
+@layer base {
+  html {
+    background-color: #050505;
+    color: #f4f4f5;
+    font-family: var(--font-sans);
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #050505;
+    overflow-x: hidden;
+  }
+}
+
+.metallic-text {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #e8e8ec 46%,
+    #9b9ca6 85%,
+    #71717a 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.metallic-text-subtle {
+  background: linear-gradient(180deg, #ffffff 0%, #c8c8d0 65%, #8b8b96 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 34s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 38s linear infinite;
+}
+
+.marquee-track:hover .animate-marquee-left,
+.marquee-track:hover .animate-marquee-right {
+  animation-play-state: paused;
+}
+
+@keyframes intro-stem-swing {
+  0% {
+    transform: rotate(0deg) scaleY(1);
+  }
+  38% {
+    transform: rotate(-34deg) scaleY(1.06);
+  }
+  72% {
+    transform: rotate(10deg) scaleY(1);
+  }
+  100% {
+    transform: rotate(0deg) scaleY(1);
+  }
+}
+
+.animate-stem-swing {
+  animation: intro-stem-swing 560ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modal-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-modal-enter {
+  animation: modal-enter 220ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-left,
+  .animate-marquee-right,
+  .animate-stem-swing,
+  .animate-modal-enter {
+    animation: none;
+  }
+}

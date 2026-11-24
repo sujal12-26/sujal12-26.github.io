@@ -1,0 +1,13 @@
+node_modules/
+build/
+dist/
+coverage/
+.aistudio/
+tmp/
+public/assets/aistudio/
+src/assets/images/hero_architect_portrait_1795430066923.jpg
+src/assets/images/project_*_laptop_*.jpg
+.DS_Store
+*.log
+.env*
+!.env.example
