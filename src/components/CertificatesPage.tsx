@@ -8,13 +8,13 @@ export function CertificatesPage() {
       <header className="border-b border-[#1f1f23]">
         <div className="max-w-[1240px] mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
           <a
-            href="/"
+            href={import.meta.env.BASE_URL}
             className="text-sm md:text-[15px] font-bold tracking-[0.14em] text-white hover:text-zinc-300 transition-colors"
           >
             SUJAL PATEL
           </a>
           <a
-            href="/#certificates"
+            href={`${import.meta.env.BASE_URL}#certificates`}
             className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-zinc-300 hover:text-white transition-colors"
           >
             <ArrowLeft className="h-4 w-4 text-[#f0422b]" aria-hidden="true" />

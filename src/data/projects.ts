@@ -9,6 +9,8 @@ export interface ProjectItem {
   highlights?: string[];
 }
 
+const projectAsset = (path: string) => `${import.meta.env.BASE_URL}projects/${path}`;
+
 export const PROJECTS: ProjectItem[] = [
   {
     id: 'ai-linux-report-generator',
@@ -16,7 +18,7 @@ export const PROJECTS: ProjectItem[] = [
     category: 'Linux / AI',
     summary:
       'An AI-powered Linux tool that turns system information into clear, structured reports for easier review and troubleshooting.',
-    image: '/projects/ai-linux-report-generator.png',
+    image: projectAsset('ai-linux-report-generator.png'),
     repositoryUrl: 'https://github.com/sujal12-26/ai-linux-report-generator',
     fullDescription:
       'AI Linux Report Generator is designed to make Linux system information easier to understand, organize, and share. It brings relevant technical details together in a structured report so readers can review an environment without interpreting scattered command output themselves.\n\nThe intended workflow has three stages: collect or provide supported Linux system details, organize the information, and generate a report with AI-assisted summaries or explanations. Exact data sources and report sections depend on the checks implemented in the project.\n\nThe tool is intended to support Linux learners, developers, administrators, and support teams with learning, documentation, and troubleshooting context. AI-generated explanations are assistance and should be checked against the underlying system information before being used for technical decisions.',
@@ -32,7 +34,7 @@ export const PROJECTS: ProjectItem[] = [
     category: 'AI Surveillance & Threat Intelligence',
     summary:
       'An AI-powered monitoring platform that analyzes camera feeds, tracks activity, and helps operators investigate incidents from a real-time dashboard.',
-    image: '/projects/helios.png',
+    image: projectAsset('helios.png'),
     repositoryUrl: 'https://github.com/gracefulprince/Helios',
     fullDescription:
       'HELIOS is designed to bring camera feeds, detections, alerts, and incident records into one operational dashboard. Its described inputs include RTSP streams, UDP sources, and video files. Computer vision components identify and track people, vehicles, and other objects, while configured zones and tripwires provide spatial context for activity.\n\nThe platform organizes events into incidents with timelines, evidence snapshots, operator notes, and status updates. Its insights features can surface unusual activity and correlate related events across cameras. An AI assistant is intended to help operators query incidents and summarize evidence; those generated explanations should be reviewed against the underlying footage and detections.\n\nThe project describes a React and Vite dashboard with a FastAPI backend and SQLite storage. REST APIs provide application services, while WebSockets stream detections and incident updates to the interface. HELIOS is intended for authorized security and monitoring workflows with human oversight.',
@@ -48,7 +50,7 @@ export const PROJECTS: ProjectItem[] = [
     category: 'Video & Creator Tools',
     summary:
       'A self-hosted video repurposing app that finds engaging moments in long videos and live streams, then turns them into captioned vertical clips.',
-    image: '/projects/short-clips.png',
+    image: projectAsset('short-clips.png'),
     repositoryUrl: 'https://github.com/sujal12-26/short-clips',
     fullDescription:
       'Short Clips helps creators turn long-form videos and live streams into short vertical clips. Users can provide supported YouTube, Twitch, or Kick links, or upload a video file. The app transcribes the audio locally, then uses a selected AI provider to suggest moments, hooks, and captions. Without an AI key, it can select moments using loudness instead.\n\nSelected clips are prepared in a 9:16 format with word-by-word captions and a choice of caption styles. A rolling recording buffer supports live clipping, where transcript, loudness changes, and chat activity can help identify moments while a stream is running. Separate creator workspaces keep channels, preferences, posting rules, and activity organized.\n\nShort Clips can prepare clips for queued or automatic publishing to YouTube, Instagram, and TikTok. The project uses a FastAPI server and web interface, with SQLite for local installations and support for server deployments. Its transcription model runs locally; AI selection can use a configured external provider or a local Ollama model. Users should have permission to use the source videos and follow platform rules when publishing.',
@@ -64,7 +66,7 @@ export const PROJECTS: ProjectItem[] = [
     category: 'AI / Engineering Education',
     summary:
       'An AI-powered study tool that analyzes engineering slides, notes, and lecture videos, then prepares structured prompts for learning in English or regional languages.',
-    image: '/projects/engineering-language-learning-prompt-generator.png',
+    image: projectAsset('engineering-language-learning-prompt-generator.png'),
     repositoryUrl:
       'https://github.com/sujal12-26/engineering-language-learning-prompt-generator',
     fullDescription:

@@ -1,3 +1,5 @@
+import heroPortrait from '../assets/images/sujal_studio_portrait_1795432324810.jpg';
+
 export const PORTFOLIO_PROFILE = {
   fullName: 'SUJAL PATEL',
   introWord: 'SUJAL',
@@ -6,7 +8,7 @@ export const PORTFOLIO_PROFILE = {
   email: 'mkp97266@gmail.com',
   location: 'Global / Remote',
   focus: 'VLSI Chip Design',
-  heroPortrait: '/src/assets/images/sujal_studio_portrait_1795432324810.jpg',
+  heroPortrait,
   introBio:
     'I’m a VLSI student interested in how chips are designed, from digital logic and RTL to verification and implementation. I’m building a strong foundation in semiconductor devices and integrated circuit design, and I enjoy learning how efficient hardware takes shape from an idea.',
 };

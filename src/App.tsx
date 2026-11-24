@@ -101,8 +101,16 @@ function PortfolioApp() {
 export default function App() {
   const pathname =
     typeof window === 'undefined' ? '' : window.location.pathname.replace(/\/+$/, '');
+  const hashRoute =
+    typeof window === 'undefined' || !window.location.hash.startsWith('#/')
+      ? ''
+      : window.location.hash.slice(2).split(/[/?#]/, 1)[0];
 
-  if (pathname === '/certificates') return <CertificatesPage />;
-  if (pathname === '/projects') return <ProjectsPage />;
+  if (pathname.endsWith('/certificates') || hashRoute === 'certificates') {
+    return <CertificatesPage />;
+  }
+  if (pathname.endsWith('/projects') || hashRoute === 'projects') {
+    return <ProjectsPage />;
+  }
   return <PortfolioApp />;
 }

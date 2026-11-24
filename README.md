@@ -28,3 +28,7 @@ The `--legacy-peer-deps` option is needed for the current Vite/esbuild dependenc
 npm run build
 npm run preview
 ```
+
+## Deploy
+
+Pushing to `main` runs the GitHub Actions workflow in `.github/workflows/deploy.yml` and publishes the site to GitHub Pages. The project base path and asset links are configured for the `sujal-portfolio` repository.

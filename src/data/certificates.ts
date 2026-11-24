@@ -9,6 +9,8 @@ export interface CertificateItem {
   documents?: { label: string; file: string }[];
 }
 
+const certificateAsset = (path: string) => `${import.meta.env.BASE_URL}certificates/${path}`;
+
 const certificates: Record<string, CertificateItem> = {
   solidworks: {
     id: 'solidworks-2024',
@@ -17,8 +19,8 @@ const certificates: Record<string, CertificateItem> = {
     description:
       'Introduces SOLIDWORKS tools and workflows for 3D CAD design.',
     completedOn: 'Nov 18, 2026',
-    image: '/certificates/linkedin-solidworks-2024-essential-training.jpg',
-    file: '/certificates/linkedin-solidworks-2024-essential-training.pdf',
+    image: certificateAsset('linkedin-solidworks-2024-essential-training.jpg'),
+    file: certificateAsset('linkedin-solidworks-2024-essential-training.pdf'),
   },
   cProgramming: {
     id: 'c-programming-foundations',
@@ -27,8 +29,8 @@ const certificates: Record<string, CertificateItem> = {
     description:
       'C language basics and programming foundations.',
     completedOn: 'Nov 18, 2026',
-    image: '/certificates/linkedin-c-programming-foundations.jpg',
-    file: '/certificates/linkedin-c-programming-foundations.pdf',
+    image: certificateAsset('linkedin-c-programming-foundations.jpg'),
+    file: certificateAsset('linkedin-c-programming-foundations.pdf'),
   },
   aiFoundations: {
     id: 'ai-foundations-thinking-machines',
@@ -37,8 +39,8 @@ const certificates: Record<string, CertificateItem> = {
     description:
       'An introduction to artificial intelligence and machine learning concepts.',
     completedOn: 'Nov 18, 2026',
-    image: '/certificates/linkedin-ai-foundations-thinking-machines.jpg',
-    file: '/certificates/linkedin-ai-foundations-thinking-machines.pdf',
+    image: certificateAsset('linkedin-ai-foundations-thinking-machines.jpg'),
+    file: certificateAsset('linkedin-ai-foundations-thinking-machines.pdf'),
   },
   leadership: {
     id: 'leadership-through-feedback',
@@ -47,16 +49,16 @@ const certificates: Record<string, CertificateItem> = {
     description:
       'Covers constructive feedback as a leadership skill. Includes the companion copy with PMI professional development details.',
     completedOn: 'Nov 16, 2026',
-    image: '/certificates/linkedin-leadership-through-feedback.jpg',
-    file: '/certificates/linkedin-leadership-through-feedback.pdf',
+    image: certificateAsset('linkedin-leadership-through-feedback.jpg'),
+    file: certificateAsset('linkedin-leadership-through-feedback.pdf'),
     documents: [
       {
         label: 'LinkedIn Learning Certificate',
-        file: '/certificates/linkedin-leadership-through-feedback.pdf',
+        file: certificateAsset('linkedin-leadership-through-feedback.pdf'),
       },
       {
         label: 'Certificate with PMI PDUs',
-        file: '/certificates/linkedin-leadership-through-feedback-pmi.pdf',
+        file: certificateAsset('linkedin-leadership-through-feedback-pmi.pdf'),
       },
     ],
   },
@@ -66,8 +68,8 @@ const certificates: Record<string, CertificateItem> = {
     provider: 'CodeWithHarry',
     description:
       'A beginner course covering the C programming language from scratch.',
-    image: '/certificates/codewithharry-c-programming-beginners.jpg',
-    file: '/certificates/codewithharry-c-programming-beginners.pdf',
+    image: certificateAsset('codewithharry-c-programming-beginners.jpg'),
+    file: certificateAsset('codewithharry-c-programming-beginners.pdf'),
   },
   jioAi: {
     id: 'jio-ai-foundation-course',
@@ -75,8 +77,8 @@ const certificates: Record<string, CertificateItem> = {
     provider: 'Jio AI Classroom',
     description:
       'Certificate of completion for the AI Foundation Course powered by JioPC.',
-    image: '/certificates/jio-ai-foundation-course.jpg',
-    file: '/certificates/jio-ai-foundation-course.pdf',
+    image: certificateAsset('jio-ai-foundation-course.jpg'),
+    file: certificateAsset('jio-ai-foundation-course.pdf'),
   },
 };
 

@@ -29,7 +29,7 @@ export function CertificatesSection() {
 
         <div className="mt-8 flex justify-center">
           <a
-            href="/certificates"
+            href={`${import.meta.env.BASE_URL}#/certificates`}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-md border border-[#27272c] bg-[#0c0c0e] px-5 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-zinc-200 transition-colors hover:border-zinc-500 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f0422b]"
