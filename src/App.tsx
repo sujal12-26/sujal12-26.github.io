@@ -23,7 +23,7 @@ function shouldSkipIntroOnLoad(): boolean {
   return false;
 }
 
-const SECTION_IDS = ['home', 'about', 'certificates', 'projects', 'play', 'contact'];
+const SECTION_IDS = ['projects', 'home', 'about', 'certificates', 'play', 'contact'];
 
 function PortfolioApp() {
   const [instantStart] = useState<boolean>(() => shouldSkipIntroOnLoad());
@@ -82,6 +82,7 @@ function PortfolioApp() {
       <Navbar activeSection={activeSection} visible={introComplete} />
 
       <main>
+        <ProjectsSection />
         <HeroSection
           ready={introComplete}
           instantSettle={instantStart && introRunId === 0}
@@ -89,7 +90,6 @@ function PortfolioApp() {
         />
         <AboutSection />
         <CertificatesSection />
-        <ProjectsSection />
         <BreakoutSection />
       </main>
 
