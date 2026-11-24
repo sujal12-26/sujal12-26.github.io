@@ -13,6 +13,21 @@ const projectAsset = (path: string) => `${import.meta.env.BASE_URL}projects/${pa
 
 export const PROJECTS: ProjectItem[] = [
   {
+    id: 'neurosync',
+    title: 'NeuroSync: Eye and Brain Signal Controlled Interaction',
+    category: 'HCI / BCI · Biosensing Prototype',
+    summary:
+      'A learning prototype that uses eye and forehead bioelectric signals with a BioAmp EXG Pill, Arduino UNO R4 Minima, and Python for experimental LED and keyboard-control demos.',
+    image: projectAsset('neurosync.png'),
+    fullDescription:
+      'NeuroSync explores how bioelectric signals can be used as computer input. Surface electrodes capture small voltage changes around the forehead or eyes. The BioAmp EXG Pill amplifies and conditions the signals, the Arduino samples them, and Python analyzes the readings over USB. EEG and EOG use separate electrode placements and are not measured simultaneously. The EOG demos can also use Chords-Python and its LSL stream.\n\nEEG beta-to-LED demo: Forehead readings are filtered and analyzed in two-second FFT windows to estimate relative power in the 13–30 Hz beta band. At startup, the program records a rest baseline and readings during silent subtraction by seven to set provisional personal thresholds. Matching the task threshold turns on the Arduino built-in LED; matching the rest threshold turns it off. This is an experimental signal-threshold demo, not thought recognition.\n\nEye blink-to-Spacebar demo: Electrodes above and below the eye capture a vertical EOG change during a blink. Python detects a brief event and can send a Spacebar press to an emulator or game. A blink and Spacebar response were observed in the emulator. Keyboard output is disabled by default unless explicitly enabled.\n\nLeft/right gaze-to-arrow demo: Electrodes beside the eyes capture horizontal EOG changes. Python reads Channel 1/A0, establishes a center baseline, and detects brief shifts using a provisional threshold of about 500 counts. The starting mapping is positive shift to LEFT and negative shift to RIGHT. It reports commands in dry-run mode by default; repeated trials are still needed to confirm actual arrow-key game control.\n\nSignal path: electrodes → BioAmp EXG Pill → Arduino UNO R4 Minima → Python processing → LED or keyboard command. Eye, forehead, and jaw muscle activity can affect readings, so thresholds and direction mapping need repeated testing for consistency.',
+    highlights: [
+      'Demonstrates EEG beta-band estimation with two-second FFT windows and personal rest/task baselines to control an Arduino LED.',
+      'Explores vertical EOG blink detection for Spacebar input and horizontal EOG shifts for provisional left/right commands.',
+      'Uses a BioAmp EXG Pill, surface electrodes, Arduino UNO R4 Minima, and Python; it measures signal changes rather than decoding thoughts.',
+    ],
+  },
+  {
     id: 'ai-linux-report-generator',
     title: 'AI Linux Report Generator',
     category: 'Linux / AI',
